@@ -1,2 +1,2 @@
-# allcountjs-facebook
-AllcountJS Facebook integration
+# allcountjs-twitter
+AllcountJS Twitter integration
