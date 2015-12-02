@@ -23,9 +23,12 @@ module.exports = function (appAccessRouter, integrationService, twitterIntegrati
 
         var tempSecret; //TODO ugly hack
 
-        appAccessRouter.get('/oauth/twitter', function(req, res) {
+        appAccessRouter.get('/oauth/twitter', function(req, res, next) {
           var oAuth = getOauth(req);
           oAuth.getOAuthRequestToken(function (error, oAuthToken, oAuthTokenSecret, results) {
+            if (error) {
+              return next(error);
+            }
             tempSecret = oAuthTokenSecret;
             var authURL = 'https://api.twitter.com/oauth/authenticate?oauth_token=' + oAuthToken;
             res.redirect(authURL);
