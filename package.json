@@ -1,0 +1,29 @@
+{
+  "name": "allcountjs-twitter",
+  "version": "1.0.0",
+  "description": "AllcountJS twitter integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allcount/allcountjs-twitter.git"
+  },
+  "keywords": [
+    "AllcountJS",
+    "RAD",
+    "twitter"
+  ],
+  "author": "Pavel Tiunov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/allcount/allcountjs-twitter/issues"
+  },
+  "homepage": "https://github.com/allcount/allcountjs-twitter#readme",
+  "dependencies": {
+    "oauth": "^0.9.13",
+    "twitter": "^1.2.5",
+    "underscore": "^1.8.3"
+  }
+}
