@@ -27,6 +27,7 @@ module.exports = function (appAccessRouter, integrationService, twitterIntegrati
           var oAuth = getOauth(req);
           oAuth.getOAuthRequestToken(function (error, oAuthToken, oAuthTokenSecret, results) {
             if (error) {
+              console.error(JSON.stringify(error));
               return next(error);
             }
             tempSecret = oAuthTokenSecret;
