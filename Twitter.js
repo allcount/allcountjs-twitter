@@ -32,7 +32,9 @@ module.exports = function (twitterIntegrationProvider, integrationService, Q) {
           return this.api().then(function (client) {
             client.stream(url, opts, function(stream) {
               stream.on('data', function(tweet) {
-                actionCallback(tweet);
+                Q(actionCallback(tweet)).catch(function (err) {
+                  console.error(err); //TODO
+                });
               });
 
               stream.on('error', function(error) {
